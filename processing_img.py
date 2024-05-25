@@ -5,13 +5,9 @@ import numpy as np
 def processing(file_path):
     # 画像を読み込む
     img = cv2.imread(file_path)
-    img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
     ### ここに画像処理のコードを記述してください ###
-    # img = cv2.GaussianBlur(img, (5, 5), 0)
-    for threshold in range(150, 255, 3):
-        th_img = cv2.threshold(img, threshold, 255, cv2.THRESH_BINARY_INV)[1]
-    img = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY_INV)[1]
+    
     ### ここに画像処理のコードを記述してください ###
 
     return img
